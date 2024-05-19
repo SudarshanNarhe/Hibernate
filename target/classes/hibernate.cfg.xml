@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernatedemo</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- We use dialect to provide information about which database we are 
+			using, we are using mysql -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- This property enables us to update the table everytime the program 
+			runs -->
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+
+		<!--  <mapping resource="emp.hbm.xml" /> -->
+		
+		<!--  <mapping class="com.demo.annotation.Customer" />  -->
+		
+		<!-- <mapping class="com.demo.annotation.Student" /> -->
+		
+		<!--  <mapping class="com.componentMapping.Employee" /> -->
+		 
+	<!-- 	 <mapping class="com.inheritance.tph.Person"></mapping>
+		 <mapping class="com.inheritance.tph.Student"></mapping>
+		  <mapping class="com.inheritance.tph.Teacher"></mapping> -->
+		  
+		<!--   <mapping class="com.inheritance.tpc.Person"></mapping>
+		 <mapping class="com.inheritance.tpc.Student"></mapping>
+		 <mapping class="com.inheritance.tpc.Teacher"></mapping> -->
+		 
+	<!-- 	  <mapping class="com.inheritance.tps.Person"></mapping>
+		 <mapping class="com.inheritance.tps.Student"></mapping>
+		 <mapping class="com.inheritance.tps.Teacher"></mapping> -->
+		 
+	<!-- 	 <mapping class="com.demo.oneToone.Department"/>
+		 <mapping class="com.demo.oneToone.Employee"/> -->
+		 
+		<!--  <mapping class="com.demo.oneTomany.Question"></mapping>
+		 <mapping class="com.demo.oneTomany.Answer"></mapping> -->
+		 
+	<!-- 	 <mapping class="com.demo.manyToone.Project"></mapping>
+		  <mapping class="com.demo.manyToone.Student"></mapping> -->
+		  
+		<mapping class="com.demo.manyTomany.Customer"></mapping>
+		  <mapping class="com.demo.manyTomany.Order"></mapping>
+		  
+	<!-- 	   <mapping class="com.demo.manyTomany.Student"></mapping>
+		  <mapping class="com.demo.manyTomany.Course"></mapping> -->
+		 
+	</session-factory>
+</hibernate-configuration>
